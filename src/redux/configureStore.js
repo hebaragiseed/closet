@@ -3,12 +3,14 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import  createHistory from 'history/createBrowserHistory';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import users from 'redux/modules/users';
 
 //process의 전체 정보를 가짐
 const env = process.env.NODE_ENV;
 
 const history = createHistory();
+
 //routerMiddleware는 history랑 싱크되야함
 //history오브젝트를 미들웨어에게 주기
 const middlewares = [thunk, routerMiddleware(history)];
@@ -23,7 +25,18 @@ const reducer = combineReducers({
   routing: routerReducer
 });
 
-let store = initialState => createStore(reducer, applyMiddleware(...middlewares));
+let store;
+
+if(env === 'development') {
+  store = initialState => 
+    createStore(
+      reducer, 
+      composeWithDevTools(applyMiddleware(...middlewares))
+    );
+} else {
+  store = initialState => createStore(reducer, applyMiddleware(...middlewares));
+}
+
 //router는 history 오브젝트 필요함
 export { history };
 export default store();
