@@ -1,0 +1,21 @@
+.footer {
+  max-width: $max-page-width;
+  margin: 20px auto;
+  width: 100%;
+  color: $dark-gray;
+  font-size: $font-small;
+  .leftColumn {
+    float: left;
+    span {
+      margin-right: 10px;
+    }
+  }
+  .rightColumn {
+    float: right;
+  }
+  &:after {
+    content:"";
+    display: block;
+    clear: both;
+  }
+}

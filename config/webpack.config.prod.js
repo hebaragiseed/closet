@@ -174,6 +174,7 @@ module.exports = {
                     loader: require.resolve('style-loader'),
                     options: {
                       hmr: false,
+                      camelCase: "dashes"
                     },
                   },
                   use: [

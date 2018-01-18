@@ -1,5 +1,9 @@
 @import "reset-css/reset.css";
 
 body {
+  font: "Noto Sans", "Apple SD Gothic Neo", "Nanum Gothic", "Malgun Gothic", sans-serif;
   background: $bg-color;
+}
+img {
+  vertical-align: top;
 }
