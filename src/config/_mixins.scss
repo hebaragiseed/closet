@@ -1,0 +1,13 @@
+@mixin cfixed () {
+  content: "";
+  display: block;
+  clear: both;
+} 
+
+@mixin boxBorder($radius) {
+  border: 1px solid #666;
+  background: #fff;
+  @if $radius == yes {
+    border-radius: 5px;
+  } 
+} 

@@ -1,0 +1,40 @@
+//float
+.auth {
+  max-width: 748px;
+  margin: 20px auto;
+  text-align: center;
+  color: $font-dark-gray;
+  .leftColumn {
+    float: left;
+    width: 50%;
+    padding-right: 15px;
+    img {
+      filter: drop-shadow(16px 16px 20px);
+    }
+  }
+  .rightColumn {
+    width: 50%;
+    float: right;
+    padding-left: 15px;
+    position: relative;
+    //position 수직정렬
+    .formBox {
+      position: absolute;
+      width: 100%;
+      margin-top: 50%;
+    .changeBox {
+      padding: 28px;
+      @include boxBorder(no);
+      .changeLink {
+        margin: 5px;
+         color: $font-light-red;
+         cursor: pointer;
+      }
+    }
+  }
+  }
+
+  &:after {
+    @include cfixed();
+  }
+}
