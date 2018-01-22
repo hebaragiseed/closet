@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Ionicon from 'react-ionicons';
 import formStyles from 'shared/formStyles.scss';
 
@@ -12,14 +13,40 @@ const SignupForm = props => (
       google로 로그인
     </button>
     <span className={formStyles.divider}>또는</span>
-    <form>
-      <input type="text" placeholder="이름" />
-      <input type="text" placeholder="이메일" />
-      <input type="password" placeholder="비밀번호" />
+    <form onSubmit={props.handleSubmit}>
+      <input 
+        type="text" 
+        name="name"
+        placeholder="이름"
+        value={props.nameValue}
+        onChange={props.handleInputChange}
+        />
+      <input 
+        type="email" 
+        name="email"
+        placeholder="이메일"
+        value={props.emailValue}
+        onChange={props.handleInputChange}
+      />
+      <input 
+        type="password" 
+        name="password"
+        placeholder="비밀번호"
+        value={props.passwordValue}
+        onChange={props.handleInputChange}
+        />
       <input type="submit" value="가입" />
     </form>
     <p>가입하면 Instagram의 약관 및 개인정보처리방침에 동의하게 됩니다.</p>
   </div>
 );
+
+SignupForm.propTypes = {
+  nameValue: PropTypes.string.isRequired,
+  emailValue: PropTypes.string.isRequired,
+  passwordValue: PropTypes.string.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
+};
 
 export default SignupForm;
