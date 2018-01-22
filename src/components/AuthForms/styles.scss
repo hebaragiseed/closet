@@ -1,0 +1,49 @@
+.loginForm, .signupForm {
+  padding: 40px;
+  padding-bottom: 22px;
+  .imgBox {
+    margin-bottom: 10px;
+  }
+  button {
+    display: inline-block;
+    width: 100%;
+    @include redButton();
+  }
+  .divider {
+    position: relative;
+    display: block;
+    margin: 20px 0;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 42%;
+      height: 1px;
+      background: $dark-gray;      
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      right: 0;
+      width: 42%;
+      height: 1px;
+      background: $dark-gray;
+    }
+  }
+  form {
+    input {
+      width:100%;
+      display: block;
+      height: 38px;
+      margin-bottom:5px;
+      padding-left: 10px; 
+      @include boxBorder(yes);
+    &[type=submit] {
+      margin: 15px 0;
+      @include redButton();
+    }
+    }
+  }
+}

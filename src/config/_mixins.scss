@@ -5,9 +5,20 @@
 } 
 
 @mixin boxBorder($radius) {
-  border: 1px solid #666;
+  border: 1px solid #EFEFEF;
   background: #fff;
   @if $radius == yes {
-    border-radius: 5px;
+    border-radius: 3px;
   } 
 } 
+
+@mixin redButton() {
+  border: 1px solid #EFEFEF;
+  background: #EA4C5A;
+  border-radius: 3px;
+  height: 26px;
+  background: $light-red;
+  color: #fff;
+  font-size: 0.875rem;//14px;
+  cursor: pointer;
+}

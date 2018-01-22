@@ -4,10 +4,14 @@
   box-sizing: border-box;
 }
 body {
+  font-size: 16px;
   font: "Noto Sans", "Apple SD Gothic Neo", "Nanum Gothic", "Malgun Gothic", sans-serif;
   background: $bg-color;
 }
 img {
   vertical-align: top;
   max-width: 100%;
+}
+input, button {
+  border: none;
 }

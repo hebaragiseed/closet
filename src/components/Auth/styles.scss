@@ -4,11 +4,13 @@
   margin: 20px auto;
   text-align: center;
   color: $font-dark-gray;
+  font-size: $font-small;
   .leftColumn {
     float: left;
     width: 50%;
     padding-right: 15px;
     img {
+      height: 540px;
       filter: drop-shadow(16px 16px 20px);
     }
   }
@@ -16,24 +18,30 @@
     width: 50%;
     float: right;
     padding-left: 15px;
-    position: relative;
+    height: 540px;
     //position 수직정렬
-    .formBox {
-      position: absolute;
+    .borderBoxGroup {
+      position: relative;
       width: 100%;
-      margin-top: 50%;
-    .changeBox {
-      padding: 28px;
-      @include boxBorder(no);
-      .changeLink {
-        margin: 5px;
-         color: $font-light-red;
-         cursor: pointer;
+      top: 50%;  
+      left: 0px;
+      transform: translateY(-50%);
+      .formBox {
+        margin-bottom: 12px;
+        @include boxBorder(no);
+      }
+      .changeBox {
+        padding: 28px;
+        @include boxBorder(no);
+        .changeLink {
+          margin: 5px;
+          color: $font-light-red;
+          cursor: pointer;
+        }
       }
     }
   }
-  }
-
+  //clearfix
   &:after {
     @include cfixed();
   }
