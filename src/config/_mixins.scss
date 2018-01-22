@@ -1,3 +1,43 @@
+
+$xl-desktop-width: 1351px;
+$desktop-width: 875px;
+$tablet-width: 768px;
+$iphone6plus-width: 450px;
+$iphone6-width: 375px;
+$phone-width: 320px;
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == "desktop-xl" {
+    @media (min-width: #{$xl-desktop-width}) {
+      @content;
+    }
+  } @else if $breakpoint == "tablet-landscape" {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) and (orientation: landscape) {
+      @content;
+     }
+  } @else if $breakpoint == "tablet" {
+      @media (min-width: #{$iphpne6plus-width}) and (max-width: #{desktop-width}) {
+      @content;
+    }
+  } @else if $breakpoint == "tablet-portrait" {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) and (orientation: portrait) {
+      @content;
+    }
+  } @else if $breakpoint == "phone-landscape" {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $breakpoint == "phone-tablet" {
+    @media (max-width: #{$desktop-width}) {
+      @content;
+    }
+  } @else if $breakpoint == "phone" {
+    @media (min-width: #{$phone-width}) and (max-width: #{$iphone6plus-width}) {
+      @content;
+    }
+  }
+}
+
 @mixin cfixed () {
   content: "";
   display: block;
@@ -5,20 +45,19 @@
 } 
 
 @mixin boxBorder($radius) {
-  border: 1px solid #EFEFEF;
-  background: #fff;
+  border: 1px solid $light-gray;
+  background: $bg-color;
   @if $radius == yes {
     border-radius: 3px;
   } 
 } 
 
 @mixin redButton() {
-  border: 1px solid #EFEFEF;
-  background: #EA4C5A;
+  border: 1px solid $light-gray;
   border-radius: 3px;
   height: 26px;
   background: $light-red;
-  color: #fff;
-  font-size: 0.875rem;//14px;
+  color: $bg-color;
+  font-size: $font-small;
   cursor: pointer;
 }
