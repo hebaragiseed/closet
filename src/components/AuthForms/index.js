@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.scss';
+import Ionicon from 'react-ionicons';
 
 export const LoginForm = props => (
   <div className={styles.loginForm}>
@@ -18,7 +19,10 @@ export const SignupForm = props => (
     <div className={styles.imgBox}>
       <img src={require("images/big-logo.svg")} alt="" />
     </div>
-    <button>google로 로그인</button>
+    <button className={styles.googleLink}>
+      <Ionicon icon="logo-google" fontSize="16px" color="white" />
+      google로 로그인
+    </button>
     <span className={styles.divider}>또는</span>
     <form>
       <input type="text" placeholder="이름" />

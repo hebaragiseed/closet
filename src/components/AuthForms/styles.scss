@@ -4,10 +4,16 @@
   .imgBox {
     margin-bottom: 10px;
   }
-  button {
+  .googleLink {
     display: inline-block;
     width: 100%;
     @include redButton();
+    svg {
+      position: relative;
+      top: 2px;
+      margin-right: 10px;
+
+    }
   }
   .divider {
     position: relative;
