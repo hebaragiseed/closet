@@ -6,7 +6,7 @@ const Footer = (props) => (
     <div className={styles.leftColumn}>
       <span>상호: (주)옷장</span>
       <span>대표: hebaragiseed</span>
-      <span>Email: hebaragiseed</span>
+      <span>Email: hebaragiseed@gmail.com</span>
       <span>고객센터: 000-0000-0000</span>
     </div>
     <div className={styles.rightColumn}>

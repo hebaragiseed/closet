@@ -46,3 +46,25 @@
     @include cfixed();
   }
 }
+//미디어 쿼리
+.auth {
+  @include breakpoint("tablet") {
+    .leftColumn {
+      display: none;
+    }
+    .rightColumn {
+      width: 70%;
+      padding: 0;
+      margin: 10px 15%;
+    }
+  }
+  @include breakpoint("phone") {
+    .leftColumn {
+      display: none;
+    }
+    .rightColumn {
+      width: 100%; 
+      margin: 0;
+    }
+  }
+}
