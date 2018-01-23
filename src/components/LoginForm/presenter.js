@@ -31,7 +31,7 @@ LoginForm.propTypes = {
   emailValue: PropTypes.string.isRequired,
   passwordValue: PropTypes.string.isRequired,
   handleInputChange: PropTypes.func.isRequired,
-  // handleSubmit: PropTypes.func.isRequired   
+  handleSubmit: PropTypes.func.isRequired   
 };
 
 export default LoginForm;

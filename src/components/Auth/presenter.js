@@ -16,20 +16,20 @@ const Auth = props => (
         </div>
         <div className={styles.changeBox}>
           {props.action === 'login' && (
-            <p>계정이 있으신가요?
+            <p>계정이 없으신가요?
             <span 
               className={styles.changeLink}
               onClick={props.changeAction}
-            >로그인
+            >가입하기
             </span>
           </p>
           )}
         {props.action === 'signup' && (
-          <p>계정이 없으신가요?
+          <p>계정이 있으신가요?
           <span 
             className={styles.changeLink}
             onClick={props.changeAction}
-          >가입하기
+          >로그인
           </span>
         </p> 
         )}

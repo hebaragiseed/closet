@@ -8,7 +8,7 @@ const SignupForm = props => (
     <div className={formStyles.imgBox}>
       <img src={require("images/big-logo.svg")} alt="" />
     </div>
-    <button className={formStyles.googleLink}>
+    <button className={formStyles.googleLink} onClick={props.handleGoogleLogin}>
       <Ionicon icon="logo-google" fontSize="16px" color="white" />
       google로 로그인
     </button>
@@ -46,7 +46,8 @@ SignupForm.propTypes = {
   emailValue: PropTypes.string.isRequired,
   passwordValue: PropTypes.string.isRequired,
   handleInputChange: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired
+  handleSubmit: PropTypes.func.isRequired,
+  handleGoogleLogin: PropTypes.func.isRequired
 };
 
 export default SignupForm;
