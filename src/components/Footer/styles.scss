@@ -14,9 +14,7 @@
     float: right;
   }
   &:after {
-    content:"";
-    display: block;
-    clear: both;
+    @include cfixed();
   }
 }
 //미디어 쿼리

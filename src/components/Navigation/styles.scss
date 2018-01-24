@@ -1,0 +1,60 @@
+.navigation {
+  border-bottom: 1px solid $light-gray;
+  .inner {
+    max-width: $max-page-width;
+    margin: 0 20px;
+    height: 80px;
+    text-align: center;
+    .leftColumn {
+      float: left;
+      h1 {
+        height: 0;
+        text-indent: -9999px;
+      }
+      .logo {
+        line-height: 80px;
+        cursor: pointer;
+        img {
+          vertical-align: middle;
+        }
+      }
+      
+    }
+    .rightColumn {
+      float: right;
+      .closetIcon {
+        line-height: 80px;
+        display: inline-block;
+        margin-right: 20px;
+        cursor: pointer;
+        img {
+          vertical-align: middle;
+        }
+      }
+      button {
+        @include redButton(); 
+        height: 30px;
+        line-height: 30px;
+        padding: 0 20px;   
+      }
+    }
+    &:after {
+      @include cfixed();
+    }    
+  }
+}
+
+    //미디어쿼리
+.navigation {
+  @include breakpoint(phone) {
+      .leftColumn .logo {
+        background: url(images/small-logo.svg) no-repeat;
+        height: 80px;
+        width: 70px;
+        background-size: 60px 70px;
+        img {
+          display: none;
+        }
+      }
+    }
+}

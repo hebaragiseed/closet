@@ -1,0 +1,21 @@
+
+<svg width="63px" height="51px" viewBox="0 0 63 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="로그인" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main" transform="translate(-424.000000, -15.000000)">
+            <g id="header" transform="translate(179.000000, 0.000000)">
+                <g id="-내-옷장-보기-아이콘" transform="translate(245.000000, 15.000000)">
+                    <rect id="Rectangle-5" stroke="#979797" x="14.5" y="3.5" width="35" height="44"></rect>
+                    <path d="M1.35546875,0.844676018 L1.35546875,50.155324 L14.3554688,47.5890536 L14.3554688,3.41094641 L1.35546875,0.844676018 Z" id="Rectangle-5" stroke="#979797"></path>
+                    <path d="M49.3554688,0.844676018 L49.3554688,50.155324 L62.3554688,47.5890536 L62.3554688,3.41094641 L49.3554688,0.844676018 Z" id="Rectangle-5" stroke="#979797" transform="translate(55.855469, 25.500000) rotate(180.000000) translate(-55.855469, -25.500000) "></path>
+                    <circle id="Oval" fill="#D8D8D8" cx="31" cy="45" r="1"></circle>
+                    <rect id="Rectangle-6" stroke="#979797" x="14.5" y="41.5" width="35" height="6"></rect>
+                    <circle id="Oval" fill="#D8D8D8" cx="31" cy="39" r="1"></circle>
+                    <rect id="Rectangle-6" stroke="#979797" x="14.5" y="35.5" width="35" height="6"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

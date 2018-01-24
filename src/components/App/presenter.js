@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import './styles.scss';
 import Auth from 'components/Auth';
+import Navigation from 'components/Navigation';
 import Footer from 'components/Footer';
 
 const App = (props) => [
+  props.isLoggedIn ? <Navigation key={1} /> : null ,
   props.isLoggedIn ? <PrivateRoutes key={2} /> : <PublicRoutes key={2} />,
   // 리액트는 array를 리턴 할때마다  key로 숫자를 필요
   <Footer key={3} />  
