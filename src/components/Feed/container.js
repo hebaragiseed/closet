@@ -11,10 +11,25 @@ class Container extends Component {
   };
   componentDidMount() {
     const { getFeed } = this.props;
-    getFeed();
+    if (!this.props.feed) {
+      getFeed();
+    } else {
+      this.setState({
+        loading: false
+      });
+    }
   }
+  //새로운 props를 얻으면
+  componentWillReceiveProps = (nextProps) => {
+    if (nextProps.feed) {
+      this.setState({
+        loading: false
+      });
+    }
+  };
   render() {
-    return <Feed {...this.state} />;
+    const { feed } = this.props;
+    return <Feed {...this.state} feed={feed} />;
   }
 }
 
