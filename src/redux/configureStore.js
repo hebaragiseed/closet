@@ -5,6 +5,7 @@ import { routerReducer, routerMiddleware } from 'react-router-redux';
 import  createHistory from 'history/createBrowserHistory';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import user from 'redux/modules/user';
+import photos from 'redux/modules/photos';
 
 //process의 전체 정보를 가짐
 const env = process.env.NODE_ENV;
@@ -22,6 +23,7 @@ if (env === 'development') {
 
 const reducer = combineReducers({
   user,
+  photos,
   routing: routerReducer
 });
 
