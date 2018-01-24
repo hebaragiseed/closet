@@ -1,0 +1,19 @@
+.loading {
+  text-align: center;
+  line-height: 500px;
+  .spinner {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    animation: spinner 1s steps(12) infinite; 
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

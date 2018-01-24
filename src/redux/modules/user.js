@@ -40,7 +40,7 @@ function emailLogin(email, password) {
       const name = user.displayName;
       const uid = user.uid; 
       //const email = user.email;
-      dispatch(loginUserSuccess(name, uid,))
+      dispatch(loginUserSuccess(name, uid))
       }
     )  
     .catch(err => console.log(err.message))
