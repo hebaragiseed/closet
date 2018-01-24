@@ -16,9 +16,11 @@ const Navigation = props => (
         </div>
       </div>
       <div className={styles.rightColumn}>
+        <Link to="/explore">
         <div className={styles.closetIcon}>
           <img src={require("images/mycloset.svg")} alt="" />
         </div>
+        </Link>
         <button>로그아웃</button>
       </div>   
     </div>   
