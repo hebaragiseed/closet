@@ -1,5 +1,8 @@
 .navigation {
   border-bottom: 1px solid $light-gray;
+  position: fixed;
+  width: 100%;
+  background: $bg-color;
   .inner {
     max-width: $max-page-width;
     margin: 0 20px;

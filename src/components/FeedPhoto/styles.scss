@@ -1,0 +1,25 @@
+.feedPhoto {
+  padding-top: 100px;
+  .inner {
+    max-width: 1060px;
+    margin: 0 auto;
+    height: 650px;
+    border: 1px solid $light-gray;
+    header {
+      height: 60px;
+      background: $black;
+      color: $font-white;
+      .profileImgBox {
+        line-height: 60px;
+        display: inline-block;
+        margin: 0px 20px;
+        img {
+          vertical-align: middle;
+          height: 50px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  
+}

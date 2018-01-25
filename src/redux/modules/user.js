@@ -5,11 +5,12 @@ import { auth, googleProvider } from 'firebase/client';
 const LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCES';
 
 //actions creator
-function loginUserSuccess(name, uid) {
+function loginUserSuccess(name, uid, profileImg) {
   return {
     type: LOGIN_USER_SUCCESS,
     name,
-    uid
+    uid,
+    profileImg
   };
 }
 
@@ -22,9 +23,10 @@ function googleLogin() {
       const user = auth.currentUser;
       user.providerData.forEach(function (profile) {
         const name = profile.displayName;
-        const uid = profile.uid;              
+        const uid = profile.uid;
+        const profileImg = profile.photoURL;              
       //const email = profile.email;
-        dispatch(loginUserSuccess(name, uid))            
+        dispatch(loginUserSuccess(name, uid, profileImg))            
       })
     })
     .catch(err => {console.log(err.message)})
@@ -96,7 +98,8 @@ function applySetUsers(state, action) {
     ...state,
     isLoggedIn: true,
     name: action.name,
-    uid: action.uid
+    uid: action.uid,
+    profileImg: action.profileImg
   }
 }
 
