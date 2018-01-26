@@ -48,7 +48,7 @@
 }
 //미디어 쿼리
 .auth {
-  @include breakpoint("tablet") {
+  @include breakpoint("max-tablet") {
     .leftColumn {
       display: none;
     }
