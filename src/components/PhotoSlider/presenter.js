@@ -11,16 +11,17 @@ const PhotoSlider = props => {
     <div className={styles.photoSlider}>      
       <div className={styles.photoBox}>
         <div className={`${styles.itemBox} ${styles.itemBox1}`}>
-          <img src={top[itemIdx]} alt="" />
+          <img src={top[itemIdx] || require('images/default.jpeg') } alt="" />
+
         </div>
         <div className={`${styles.itemBox} ${styles.itemBox2}`}>
-          <img src={top[itemIdx+1]} alt="" />
+          <img src={top[itemIdx+1] ||require('images/default.jpeg')} alt="" />
         </div>
         <div className={`${styles.itemBox} ${styles.itemBox3}`}>
-          <img src={top[itemIdx+2]} alt="" />
+          <img src={top[itemIdx+2] ||require('images/default.jpeg')} alt="" />
         </div>
         <div className={`${styles.itemBox} ${styles.itemBox4}`}>
-          <img src={top[itemIdx+3]} alt="" />
+          <img src={top[itemIdx+3] ||require('images/default.jpeg')} alt="" />
         </div>  
         <button 
           className={styles.nextBtn}

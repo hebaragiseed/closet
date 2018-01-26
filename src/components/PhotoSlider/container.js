@@ -41,21 +41,39 @@ class Container extends Component {
 
   _handleNext =() => {
   //처음 아이템의 0번 인덱스에서 부터 화면 크기에 따라 4/2/1 더함
-  let nextItemidx = this.state.itemIdx + this.state.resizeItemNumber;    
-    return (
-      this.setState({
-      itemIdx: nextItemidx     
-      })
-    );
-  }
+  let nextItemidx = this.state.itemIdx + this.state.resizeItemNumber; 
+  let length = this.props.closet.top.length + this.state.resizeItemNumber; 
+  console.log(this.props.closet.top.length,this.state.resizeItemNumber,'kkkkkk')
+    if (nextItemidx <  length) {
+      return (
+        this.setState({
+        itemIdx: nextItemidx     
+        })    
+      )
+    } else {
+      return (
+        this.setState({
+        itemIdx: 0     
+        })    
+      )
+    }
+}
   _handlePrev =() => {
     //처음 아이템의 0번 인덱스에서 부터 화면 크기에 따라 4/2/1 빼기
     let prevItemIdx = this.state.itemIdx - this.state.resizeItemNumber;    
-    return (
-      this.setState({
+    if (prevItemIdx > 0) {
+      return (
+        this.setState({
         itemIdx: prevItemIdx     
-      })
-    );
+        })    
+      )
+    } else {
+      return (
+        this.setState({
+        itemIdx: 0     
+        })    
+      )
+    }
   }
 }
 
