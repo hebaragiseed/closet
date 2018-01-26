@@ -3,39 +3,57 @@ import PhotoSlider from './presenter';
 
 class Container extends Component {
   state = {
-    index0: 0,
-    index1: 1,
-    index2: 2,
-    index3: 3,
+    itemIdx: 0,    
+    resizeItemNumber: 4,
   }
-  render () {
+
+  _handleWindowResize = () => {  
+    const wd = window.innerWidth;
+    if (wd >= 768 ) {
+      this.setState({ resizeItemNumber: 4 });
+    } else if (wd <= 420) {
+      this.setState({ resizeItemNumber: 1 });
+    } else if (wd < 768) {
+      this.setState({ resizeItemNumber: 2 }); 
+    }
+  }
   
-    return(
-      
+  componentDidMount() {
+    window.addEventListener('resize', this._handleWindowResize);
+  }
+  componentWillMount() {
+    window.removeEventListener('resize', this._handleWindowResize )
+  }
+
+  render () {
+    return(      
       <PhotoSlider
       {...this.props}
-        index0={this.state.index0}
-        index1={this.state.index1}
-        index2={this.state.index2}
-        index3={this.state.index3}
-        button={this._handleNext}
+        itemIdx={this.state.itemIdx}       
+        nextbutton={this._handleNext}
+        prevbutton={this._handlePrev}        
+        window={this.state.resizeItemNumber}
       />
     );
   }
+
   _handleNext =() => {
-    let slide0 = this.state.index0 + 4
-    let slide1 = this.state.index1 + 4
-    let slide2 = this.state.index2 + 4
-    let slide3 = this.state.index3 + 4
+  //처음 아이템의 0번 인덱스에서 부터 화면 크기에 따라 4/2/1 더함
+  let nextItemidx = this.state.itemIdx + this.state.resizeItemNumber;    
     return (
       this.setState({
-        index0: slide0,
-        index1: slide1,
-        index2: slide2,
-        index3: slide3,
+      itemIdx: nextItemidx     
       })
     );
-
+  }
+  _handlePrev =() => {
+    //처음 아이템의 0번 인덱스에서 부터 화면 크기에 따라 4/2/1 빼기
+    let prevItemIdx = this.state.itemIdx - this.state.resizeItemNumber;    
+    return (
+      this.setState({
+        itemIdx: prevItemIdx     
+      })
+    );
   }
 }
 
