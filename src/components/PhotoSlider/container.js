@@ -8,13 +8,15 @@ class Container extends Component {
   }
 
   _handleWindowResize = () => {  
-    const wd = window.innerWidth;
-    if (wd >= 768 ) {
+    const windowWidth = window.innerWidth;
+    if (windowWidth >= 768 ) {
       this.setState({ resizeItemNumber: 4 });
-    } else if (wd <= 420) {
+    } else if (windowWidth < 320) {
       this.setState({ resizeItemNumber: 1 });
-    } else if (wd < 768) {
+    } else if (windowWidth < 600) {
       this.setState({ resizeItemNumber: 2 }); 
+    } else if (windowWidth < 768) {
+      this.setState({ resizeItemNumber: 3 }); 
     }
   }
   
@@ -30,8 +32,8 @@ class Container extends Component {
       <PhotoSlider
       {...this.props}
         itemIdx={this.state.itemIdx}       
-        nextbutton={this._handleNext}
-        prevbutton={this._handlePrev}        
+        nextBtn={this._handleNext}
+        prevBtn={this._handlePrev}        
         window={this.state.resizeItemNumber}
       />
     );

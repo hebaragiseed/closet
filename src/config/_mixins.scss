@@ -2,6 +2,7 @@
 $xl-desktop-width: 1240px;
 $desktop-width: 875px;
 $tablet-width: 768px;
+$tablet-height:600px;
 $iphone6plus-width: 450px;
 $iphone6-width: 375px;
 $phone-width: 320px;
@@ -14,17 +15,17 @@ $phone-width: 320px;
   } @else if $breakpoint == "tablet-landscape" {
     @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) and (orientation: landscape) {
       @content;
-     }
+    }
   } @else if $breakpoint == "tablet" {
       @media (min-width: #{$iphone6plus-width}) and (max-width: #{$desktop-width}) {
-        @content;
+      @content;
     }
   } @else if $breakpoint == "max-tablet" {
       @media (max-width: #{$desktop-width}) {
-        @content;
+      @content;
     } 
   } @else if $breakpoint == "tablet-portrait" {
-    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) and (orientation: portrait) {
+    @media (max-width: #{$tablet-width}) {
       @content;
     }
   } @else if $breakpoint == "phone-landscape" {
@@ -32,13 +33,17 @@ $phone-width: 320px;
       @content;
     }
   } @else if $breakpoint == "phone-tablet" {
-    @media (max-width: #{$desktop-width}) {
+    @media (max-width: #{$tablet-height}) {
       @content;
     }
   } @else if $breakpoint == "phone" {
     @media (max-width: #{$iphone6plus-width}) {
       @content;
-    }
+    }     
+  } @else if $breakpoint == "phone-only" {
+    @media (max-width: #{$phone-width}) {
+      @content;
+    } 
   }
 }
 
