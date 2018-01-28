@@ -29,9 +29,9 @@ FeedPhoto.propType = {
   name: PropTypes.string.isRequired,
   // uid: PropTypes.string.isRequired,
   id: PropTypes.number.isRequiered,
-  // closet: PropTypes.shape({
+   closet: PropTypes.shape({
   //   top: PropTypes.arrayOf().isRequiered,
   //   pant: PropTypes.arrayOf().isRequiered
-  // }).isRequired
+   }).isRequired
 }
 export default FeedPhoto;

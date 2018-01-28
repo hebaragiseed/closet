@@ -36,5 +36,10 @@ const PhotoSlider = props => {
       </div>
     </div>
   );
-}
+};
+PhotoSlider.propTypes = {
+  itemIdx: PropTypes.number.isRequired,
+  prevBtn: PropTypes.func.isRequired,
+  nextBtn: PropTypes.func.isRequired,
+};
 export default PhotoSlider;
