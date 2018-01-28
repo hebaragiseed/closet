@@ -8,12 +8,15 @@
     .itemBox {
       float: left;
       width: 25%;
-      height: 220px;
       text-align: center;
+      .heartActionsBox{
+        position: relative;
+        height: 220px;
       img {
         height: 100%;
       }
     }
+  }
     button {
       position: absolute;
       transform: translateY(-50%);
