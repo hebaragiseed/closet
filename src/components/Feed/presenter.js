@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import styles from './styles.scss';
 import Loading from 'components/Loading';
 import FeedPhoto from 'components/FeedPhoto';
@@ -21,7 +22,7 @@ const LoadingFeed = props => (
 
 const RenderFeed = props => (
   <div>
-    {props.feed.map(photo => <FeedPhoto {...photo} key={photo.id} />)}
+    {_.map(props.feed, photo => <FeedPhoto {...photo} key={photo.id} />)}
   </div>
 );
 Feed.propTypes = {

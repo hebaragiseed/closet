@@ -26,15 +26,16 @@ class Container extends Component {
   componentWillMount() {
     window.removeEventListener('resize', this._handleWindowResize )
   }
-
+  
   render () {
+    //console.log(this.props.closetItem)
+    //console.log("화면 크기에 따라 보이는 이미지수 ",this.state.resizeItemNumber)
     return(      
       <PhotoSlider
-      {...this.props}
+        item = {this.props.closetItem}
         itemIdx={this.state.itemIdx}       
         nextBtn={this._handleNext}
-        prevBtn={this._handlePrev}        
-        window={this.state.resizeItemNumber}
+        prevBtn={this._handlePrev}
       />
     );
   }
@@ -42,8 +43,8 @@ class Container extends Component {
   _handleNext =() => {
   //처음 아이템의 0번 인덱스에서 부터 화면 크기에 따라 4/2/1 더함
   let nextItemidx = this.state.itemIdx + this.state.resizeItemNumber; 
-  let length = this.props.closet.top.length + this.state.resizeItemNumber; 
-  console.log(this.props.closet.top.length,this.state.resizeItemNumber,'kkkkkk')
+  let length = this.props.closetItem.length + this.state.resizeItemNumber; 
+  console.log(this.props.closetItem.length,this.state.resizeItemNumber,'kkkkkk')
     if (nextItemidx <  length) {
       return (
         this.setState({

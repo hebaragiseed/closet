@@ -17,7 +17,8 @@ const FeedPhoto = props => {
           <span>{props.name}</span>
         </header>
         <div className={styles.column}>
-          <PhotoSlider closet={props.closet} />
+          <PhotoSlider closetItem={props.closet.top} />
+          <PhotoSlider closetItem={props.closet.pants} />
         </div>
       </div>
     </div>
