@@ -42,7 +42,7 @@ function likeImage(imageId,category,creatorUid) {
       return like;      
     });
     //console.log(imageId,category,creatorUid)
-  }
+  };
 }
 
 
