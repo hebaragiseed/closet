@@ -1,0 +1,42 @@
+.feedPhoto {
+  padding-top: 100px;
+  .inner {
+    max-width: 1060px;
+    margin: 0 auto;
+    height: 650px;
+    border: 1px solid $light-gray;
+    header {
+      height: 60px;
+      padding: 0px 30px;
+      background: $black;
+      color: $font-white;
+      .leftColumn{
+        float: left;
+        .profileImgBox {
+          line-height: 60px;
+          display: inline-block;
+          img {
+            vertical-align: middle;
+            height: 50px;
+            border-radius: 50%;
+          }
+        }
+      }
+      .rightColumn{
+        float: right;
+        .iconBox {
+          line-height: 60px;
+        }
+        img {
+          vertical-align: middle;
+        &:first-child{
+        margin-right: 20px;
+        }
+        }
+      }
+      &:after {
+        @include cfixed();
+      }
+    }
+  }  
+}

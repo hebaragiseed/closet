@@ -5,7 +5,9 @@ const mapStateToProps = (state) => {
   const { user, routing: { location }} = state;
   return {
     isLoggedIn: user.isLoggedIn,
-    pathname: location.pathname
+    pathname: location.pathname,
+    name: user.name,
+    uid: user.uid
   };
 }
 
