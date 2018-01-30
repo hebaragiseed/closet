@@ -22,6 +22,30 @@ function getFeed() {
   }
 }
 
+function likeImage(imageId,category,creatorUid) {
+  return (dispatch, getState) => {    
+    const uid = getState().user.uid;
+    console.log(imageId,category,creatorUid)
+    db.ref(`users/${creatorUid}/closet/${category}/${imageId}`).transaction((like)=> {
+      if (like) {
+        if (like.hearts && like.hearts[uid]) {
+          like.like_count--;
+          like.hearts[uid] = null;
+        } else {
+          like.like_count++;
+          if (!like.hearts) {
+            like.hearts = {};
+          }
+          like.hearts[uid] = true;
+        }
+      }
+      return like;      
+    });
+    //console.log(imageId,category,creatorUid)
+  }
+}
+
+
 //initial state
 const initialState = {};
 
@@ -46,7 +70,8 @@ function applySetFeed(state, action) {
 
 //exports
 const actionCreators = {
-  getFeed
+  getFeed,
+  likeImage
 }
 
 export { actionCreators };
