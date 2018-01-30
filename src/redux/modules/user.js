@@ -3,7 +3,7 @@ import { auth, googleProvider } from 'firebase/client';
 
 //actions
 const LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCES';
-
+const LOGOUT_USER  = 'LOGOUT_USER';
 //actions creator
 function loginUserSuccess(name, uid, profileImg) {
   return {
@@ -11,6 +11,13 @@ function loginUserSuccess(name, uid, profileImg) {
     name,
     uid,
     profileImg
+  };
+}
+
+function logoutUser() {
+  console.log('디스패치')
+  return {
+    type: LOGOUT_USER
   };
 }
 
@@ -51,10 +58,9 @@ function emailLogin(email, password) {
 
 //회원가입할 때 
 function createAccount(name, email, password) {
-  return (dispach => {
+  return (dispatch => {
     auth.createUserWithEmailAndPassword(email, password)
     .then(() => {
-      console.log('가입왼료')
       alert('가입 되었습니다')
       var user = auth.currentUser;
       user.updateProfile({
@@ -66,8 +72,7 @@ function createAccount(name, email, password) {
       .catch(function(error) {
         var user = auth.currentUser;
         user.delete()
-        alert('다시 회원가입을 작성해주세요')
-        
+        alert('다시 회원가입을 작성해주세요')        
       });
     })
     .catch(err => {
@@ -76,6 +81,17 @@ function createAccount(name, email, password) {
       }
     )
   });    
+}
+
+//로그아웃 버튼 누를때 
+function logout() {
+  return (dispatch => {
+    auth.signOut().then(() => {
+      dispatch(logoutUser())
+    }).catch(function(error) {
+      
+    });
+  })
 }
 
 //initial state
@@ -87,6 +103,8 @@ function reducer(state = initialState, action) {
   switch (action.type) {
     case LOGIN_USER_SUCCESS:
       return applySetUsers(state, action)
+    case LOGOUT_USER:
+      return applyLogoutUsers(state)
     default:
       return state
   }
@@ -100,14 +118,24 @@ function applySetUsers(state, action) {
     name: action.name,
     uid: action.uid,
     profileImg: action.profileImg
-  }
+  };
+}
+
+function applyLogoutUsers(state) {
+  return {
+    isLoggedIn: false,
+    name: '',
+    uid: '',
+    profileImg: ''
+  };
 }
 
 //exports
 const actionCreators = {
   googleLogin,
   createAccount,
-  emailLogin
+  emailLogin,
+  logout
 };
 export { actionCreators }
 

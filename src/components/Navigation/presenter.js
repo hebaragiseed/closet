@@ -21,7 +21,7 @@ const Navigation = props => (
           <img src={require("images/mycloset.svg")} alt="" />
         </div>
         </Link>
-        <button>로그아웃</button>
+        <button onClick={props.handleLogout}>로그아웃</button>
       </div>   
     </div>   
   </div>
