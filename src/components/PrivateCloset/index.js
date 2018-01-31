@@ -5,7 +5,8 @@ const mapStateToProps = state => {
   const {photos, user} = state
   return {
     userFeed: photos.feed,
-    userUid: user.uid
+    uid: user.uid,
+    name: user.name
   };
 }
 

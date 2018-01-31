@@ -5,6 +5,8 @@
     <defs>
         <rect id="path-1" x="0" y="0" width="46" height="44"></rect>
         <rect id="path-2" x="0" y="0" width="46" height="9"></rect>
+        <path d="M11,3 L15,3 L15,6 L11,6 L11,3 Z M17,3 L21,3 L21,6 L17,6 L17,3 Z" id="path-3"></path>
+        <rect id="path-4" x="5" y="3" width="4" height="3"></rect>
     </defs>
     <g id="로그인" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="내-옷장-만보기" transform="translate(-947.000000, -95.000000)">
@@ -18,6 +20,14 @@
                     <rect stroke="#9B9B9B" stroke-width="1" x="0.5" y="0.5" width="45" height="8"></rect>
                 </g>
                 <circle id="Oval-3" stroke="#9B9B9B" fill="#FFFFFF" cx="23.5" cy="27.5" r="10.5"></circle>
+                <g id="Rectangle-10">
+                    <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <path stroke="#979797" stroke-width="1" d="M11.5,3.5 L11.5,5.5 L14.5,5.5 L14.5,3.5 L11.5,3.5 Z M17.5,3.5 L17.5,5.5 L20.5,5.5 L20.5,3.5 L17.5,3.5 Z"></path>
+                </g>
+                <g id="Rectangle-10">
+                    <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <rect stroke="#979797" stroke-width="1" x="5.5" y="3.5" width="3" height="2"></rect>
+                </g>
             </g>
         </g>
     </g>

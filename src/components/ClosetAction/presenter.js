@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles.scss';
 import PhotoSlider from 'components/PhotoSlider';
 
-const FeedPhoto = props => {
+const FeedPhoto = props => {console.log(props.closet.closet,'jjjjjjjj')
   return (
     <div className={styles.feedPhoto}>
       <div className={styles.inner}>
@@ -18,15 +18,15 @@ const FeedPhoto = props => {
             <span>{props.name}</span>            
           </div>
           <div className={styles.rightColumn}>
-              <div className={styles.iconBox}>
-                <img src={require('images/top.svg')} alt="" />
-                <img src={require('images/washer.svg')} alt="" />
-              </div>
+            <div className={styles.iconBox}>
+              <img src={require('images/top.svg')} alt="" />
+              <img src={require('images/washer.svg')} alt="" />
+            </div>
           </div>
         </header>
         <div className={styles.sliderColumn}>
-          {/* <PhotoSlider closetItem={props.closet.top} />
-          <PhotoSlider closetItem={props.closet.pants} /> */}
+          <PhotoSlider closetItem={props.closet.top} />
+          <PhotoSlider closetItem={props.closet.pants} />
         </div>
       </div>
     </div>
