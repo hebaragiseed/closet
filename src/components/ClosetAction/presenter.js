@@ -37,7 +37,11 @@ const FeedPhoto = props => {console.log(props)
         </div>
       </div>
       {props.seeingNewClothes ? 
-        (<NewClothes closeNewClothes={props.closeNewClothes} />): null
+        (<NewClothes 
+          closeNewClothes={props.closeNewClothes}
+          topLength={props.closet.top} 
+          pantsLenth={props.closet.pants}
+        />): null
       }
     </div>
   );

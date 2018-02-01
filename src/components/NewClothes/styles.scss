@@ -25,10 +25,15 @@
     }
     header {
       border-bottom: 1px solid $light-gray;
-      padding: 10px;  
-      svg {
+      height: 50px;
+      span{
+        line-height: 50px;
         cursor: pointer;
-      }     
+        padding: 10px;
+        svg {
+          vertical-align: middle;
+        }     
+      } 
     }
     form {
       text-align: center;
@@ -37,9 +42,11 @@
       span {
         display: block;
       }
+      label:nth-of-type(1){
+        margin-right: 20px;
+      }
       input {
         @include boxBorder(yes);
-        margin-left: 20px;
         font-size: $font-small;
       }
       .preview {

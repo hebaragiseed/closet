@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import NewClothes from './presenter';
 
 class Container extends Component{
   state = {
     file: '',
-    imagePreviewUrl: '',
     category: ''
   };
+  static propTypes = {
+    saveNewClothes: PropTypes.func.isRequired
+  }
   render() {
-    const { file, imagePreviewUrl, category } = this.state;
+    const { file, category } = this.state;
     return (
       <NewClothes 
         fileValue={file}
-        imagePreviewValue={imagePreviewUrl}
         categoryValue={category}
         handleImageChange={this._handleImageChange}
         handleSubmit={this._handleSubmit}
@@ -28,8 +30,19 @@ class Container extends Component{
     })
   }
   _handleSubmit = event => {
+    const { file, category } = this.state;
+    const { saveNewClothes } = this.props;
     event.preventDefault();
-    console.log('전송')
+    if (file && category) {
+      return saveNewClothes(file, category)
+    } else if (file) {
+      return alert('종류를 선택해주세요')
+    } else if (category) {
+      return alert('사진을 선택해주세요')
+    } else {
+      return alert('사진과 종류를 선택해주세요')
+    }
+    
   }
 };
 

@@ -21,7 +21,6 @@ class Container extends Component {
     });
   };
   _closeNewClothes = () => {
-    console.log('닫혀')
     this.setState({
       seeingNewClothes: false
     });

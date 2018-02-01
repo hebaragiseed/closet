@@ -21,8 +21,8 @@ function getFeed() {
     })
   }
 }
-
-function likeImage(imageId,category,creatorUid) {
+//좋아요버튼 눌렀을때 
+function likeImage(imageId, category, creatorUid) {
   return (dispatch, getState) => {    
     const uid = getState().user.uid;
     console.log(imageId,category,creatorUid)
@@ -43,6 +43,21 @@ function likeImage(imageId,category,creatorUid) {
     });
     //console.log(imageId,category,creatorUid)
   };
+}
+
+function saveNewClothes(file, category, topLength, pantsLength) {
+  return (dispatch, getState) => {
+    const creator_uid = getState().user.uid;
+    const a = topLength.length;
+    console.log(a,'aaaa')
+    db.ref(`users/${creator_uid}/closet/${category}/${a}`).set({
+      category,
+      creator_uid,
+      id: a,
+      image: file,
+      like_count: 0
+    })
+  }
 }
 
 
@@ -71,7 +86,8 @@ function applySetFeed(state, action) {
 //exports
 const actionCreators = {
   getFeed,
-  likeImage
+  likeImage,
+  saveNewClothes
 }
 
 export { actionCreators };
