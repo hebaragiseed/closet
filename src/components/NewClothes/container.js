@@ -34,15 +34,18 @@ class Container extends Component{
     const { saveNewClothes } = this.props;
     event.preventDefault();
     if (file && category) {
-      return saveNewClothes(file, category)
+      saveNewClothes(file, category);
+      this.setState({
+        file: '',
+        category: ''
+      });   
     } else if (file) {
-      return alert('종류를 선택해주세요')
+      return alert('종류를 선택해주세요');
     } else if (category) {
-      return alert('사진을 선택해주세요')
+      return alert('사진을 선택해주세요');
     } else {
-      return alert('사진과 종류를 선택해주세요')
-    }
-    
+      return alert('사진과 종류를 선택해주세요');
+    } 
   }
 };
 
