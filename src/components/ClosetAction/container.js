@@ -1,6 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import FeedPhoto from './presenter';
 
-const Container = props => <FeedPhoto {...props} />;
+class Container extends Component {
+  state = {
+    seeingNewClothes: false
+  };
+
+  render() {
+    return(
+      <FeedPhoto {...this.props}
+        seeingNewClothes={this.state.seeingNewClothes}
+        openNewClothes={this._openNewClothes}
+        closeNewClothes={this._closeNewClothes} />
+    );
+  }
+
+  _openNewClothes = () => {
+    this.setState({
+      seeingNewClothes: true
+    });
+  };
+  _closeNewClothes = () => {
+    console.log('닫혀')
+    this.setState({
+      seeingNewClothes: false
+    });
+  };
+} 
+
 
 export default Container;

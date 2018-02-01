@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.scss';
 import PhotoSlider from 'components/PhotoSlider';
+import NewClothes from 'components/NewClothes';
 
-const FeedPhoto = props => {console.log(props.closet.closet,'jjjjjjjj')
+const FeedPhoto = props => {console.log(props)
   return (
     <div className={styles.feedPhoto}>
       <div className={styles.inner}>
@@ -19,7 +20,13 @@ const FeedPhoto = props => {console.log(props.closet.closet,'jjjjjjjj')
           </div>
           <div className={styles.rightColumn}>
             <div className={styles.iconBox}>
-              <img src={require('images/top.svg')} alt="" />
+              <img 
+                src={require('images/top.svg')}
+                alt="새로운 옷 저장하기 아이콘"
+                onClick={props.openNewClothes}
+                className={styles.topIcon}
+                title="새로운 옷 저장"
+              />
               <img src={require('images/washer.svg')} alt="" />
             </div>
           </div>
@@ -29,6 +36,9 @@ const FeedPhoto = props => {console.log(props.closet.closet,'jjjjjjjj')
           <PhotoSlider closetItem={props.closet.pants} />
         </div>
       </div>
+      {props.seeingNewClothes ? 
+        (<NewClothes closeNewClothes={props.closeNewClothes} />): null
+      }
     </div>
   );
 };
@@ -40,6 +50,9 @@ FeedPhoto.propType = {
    closet: PropTypes.shape({
   //   top: PropTypes.arrayOf().isRequiered,
   //   pant: PropTypes.arrayOf().isRequiered
-   }).isRequired
+   }).isRequired,
+  seeingNewClothes: PropTypes.bool.isRequired,
+  openNewClothes: PropTypes.func.isRequired,
+  closeNewClothes: PropTypes.func.isRequired,
 }
 export default FeedPhoto;
