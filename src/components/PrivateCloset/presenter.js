@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.scss';
-import ClosetAction from 'components/ClosetAction';
+import PrivateClosetInner from 'components/PrivateClosetInner';
 
 const PrivateCloset = props => {
   console.log(props.uid, 'privateCloset')
@@ -19,7 +19,7 @@ const PrivateCloset = props => {
 
 const Closet = props => (
   <div>
-    <ClosetAction name={props.name} closet={props.userUidCloset.closet} />
+    <PrivateClosetInner name={props.name} closet={props.userUidCloset.closet} />
   </div>
 );
 export default PrivateCloset;

@@ -1,0 +1,8 @@
+.privateActions {
+  position: absolute;
+  .iconBox {
+    &:hover {
+      background: opacify($color: #000000, $amount: 0.5)
+    }
+  }
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.scss';
-import PhotoSlider from 'components/PhotoSlider';
-import NewClothes from 'components/NewClothes';
+import PrivatePhotoSlider from 'components/PrivatePhotoSlider';
+import PrivateNewClothes from 'components/PrivateNewClothes';
 
-const FeedPhoto = props => {console.log(props)
+const PrivateClosetInner = props => {console.log(props)
   return (
-    <div className={styles.feedPhoto}>
+    <div className={styles.privateClosetInner}>
       <div className={styles.inner}>
         <header>
           <div className={styles.leftColumn}>
@@ -32,12 +32,12 @@ const FeedPhoto = props => {console.log(props)
           </div>
         </header>
         <div className={styles.sliderColumn}>
-          <PhotoSlider closetItem={props.closet.top} />
-          <PhotoSlider closetItem={props.closet.pants} />
+          <PrivatePhotoSlider closetItem={props.closet.top} />
+          <PrivatePhotoSlider closetItem={props.closet.pants} />
         </div>
       </div>
       {props.seeingNewClothes ? 
-        (<NewClothes 
+        (<PrivateNewClothes 
           closeNewClothes={props.closeNewClothes}
           topLength={props.closet.top} 
           pantsLenth={props.closet.pants}
@@ -47,7 +47,7 @@ const FeedPhoto = props => {console.log(props)
   );
 };
 
-FeedPhoto.propType = {
+PrivateClosetInner.propType = {
   name: PropTypes.string.isRequired,
   // uid: PropTypes.string.isRequired,
   id: PropTypes.number.isRequiered,
@@ -59,4 +59,4 @@ FeedPhoto.propType = {
   openNewClothes: PropTypes.func.isRequired,
   closeNewClothes: PropTypes.func.isRequired,
 }
-export default FeedPhoto;
+export default PrivateClosetInner;

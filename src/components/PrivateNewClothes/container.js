@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import NewClothes from './presenter';
+import PrivateNewClothes from './presenter';
 
 class Container extends Component{
   state = {
@@ -13,7 +13,7 @@ class Container extends Component{
   render() {
     const { file, category } = this.state;
     return (
-      <NewClothes 
+      <PrivateNewClothes 
         fileValue={file}
         categoryValue={category}
         handleImageChange={this._handleImageChange}

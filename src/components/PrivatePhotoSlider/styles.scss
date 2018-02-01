@@ -1,0 +1,65 @@
+.privatePhotoSlider {
+  padding: 10px;
+  .photoBox {
+    position: relative;
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0 30px;
+    .itemBox {
+      float: left;
+      width: 25%;
+      text-align: center;
+      .heartActionsBox{
+        position: relative;
+        height: 220px;
+      img {
+        height: 100%;
+      }
+    }
+  }
+    button {
+      position: absolute;
+      transform: translateY(-50%);
+    }
+    .nextBtn {
+      top: 50%;
+      right: -20px;
+    }
+    .prevBtn {
+      top: 50%;
+      left: -20px;
+    }
+    &:after {
+      @include cfixed();
+    }
+  }  
+}
+//미디어 쿼리
+.photoSlider {
+  .photoBox {
+    @include breakpoint(tablet-portrait) {
+      .itemBox4 {
+        display: none;
+      }
+      .itemBox{
+        width: 33.3333%;
+      }
+    }
+    @include breakpoint(phone-tablet) {
+      .itemBox3 {
+        display: none;
+      }
+      .itemBox{
+        width: 50%;
+      }
+    }
+    @include breakpoint(phone-only) {     
+      .itemBox2 {
+        display: none;
+      }
+      .itemBox{
+        width: 100%;
+      }
+    }
+  }  
+}

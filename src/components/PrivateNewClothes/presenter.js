@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Ionicon from 'react-ionicons';
 import styles from './styles.scss';
 
-const NewClothes = props => {console.log(props)
+const PrivateNewClothes = props => {console.log(props)
   return(
-  <div className={styles.newClothes}>
+  <div className={styles.PrivatenewClothes}>
     <div className={styles.container}>
       <header>
         <span onClick={props.closeNewClothes} >
@@ -43,7 +43,7 @@ const NewClothes = props => {console.log(props)
   </div>
 );
 }
-NewClothes.propType = {
+PrivateNewClothes.propType = {
   fileValue:  PropTypes.string.isRequired,
   categoryValue:  PropTypes.string.isRequired,
   handleImageSubmit:  PropTypes.func.isRequired,
@@ -51,4 +51,4 @@ NewClothes.propType = {
   closeNewClothes: PropTypes.func.isRequired,
 
 };
-export default NewClothes;
+export default PrivateNewClothes;

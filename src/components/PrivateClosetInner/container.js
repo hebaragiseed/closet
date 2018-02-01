@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FeedPhoto from './presenter';
+import PrivateClosetInner from './presenter';
 
 class Container extends Component {
   state = {
@@ -8,7 +8,7 @@ class Container extends Component {
 
   render() {
     return(
-      <FeedPhoto {...this.props}
+      <PrivateClosetInner {...this.props}
         seeingNewClothes={this.state.seeingNewClothes}
         openNewClothes={this._openNewClothes}
         closeNewClothes={this._closeNewClothes} />
