@@ -5,7 +5,10 @@ const PrivateActions = props => {
   return (
     <div className={styles.privateActions}>
       <div className={styles.iconBox}>
-        <img src={require('images/washer.svg')} alt="" />
+        <img 
+          src={require('images/washer.svg')} 
+          alt="" 
+          onClick={props.handleDeleteClothes}/>
         <img src={require('images/washer.svg')} alt="" />
       </div>
     </div>

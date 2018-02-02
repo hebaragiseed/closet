@@ -10,7 +10,7 @@ const PhotoSlider = props => {
   const itemOrder1 = item[`${itemIdx+1}`];
   const itemOrder2 = item[`${itemIdx+2}`];
   const itemOrder3 = item[`${itemIdx+3}`];
-  //const itemIdx = props.itemIdx;
+  
   return (
     <div className={styles.photoSlider}>      
       <div className={styles.photoBox}>
