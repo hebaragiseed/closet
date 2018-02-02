@@ -23,7 +23,8 @@ const PrivatePhotoSlider = props => {
               imageId={itemOrder0.id}
               category={itemOrder0.category}
               creatorUid={itemOrder0.creator_uid}
-              hearts={itemOrder0.hearts || false}              
+              hearts={itemOrder0.hearts || false}
+              washer={itemOrder0.is_washed}              
              /> : null }  
             </div>  
         </div>
@@ -36,7 +37,8 @@ const PrivatePhotoSlider = props => {
               imageId={itemOrder1.id}
               category={itemOrder1.category}
               creatorUid={itemOrder1.creator_uid}
-              hearts={itemOrder1.hearts || false}              
+              hearts={itemOrder1.hearts || false}
+              washer={itemOrder1.is_washed}              
              /> : null }  
             </div>
         </div>
@@ -49,7 +51,8 @@ const PrivatePhotoSlider = props => {
               imageId={itemOrder2.id}
               category={itemOrder2.category}
               creatorUid={itemOrder2.creator_uid}
-              hearts={itemOrder2.hearts || false}              
+              hearts={itemOrder2.hearts || false}
+              washer={itemOrder2.is_washed}              
              /> : null }  
           </div> 
         </div>
@@ -62,7 +65,8 @@ const PrivatePhotoSlider = props => {
               imageId={itemOrder3.id}
               category={itemOrder3.category}
               creatorUid={itemOrder3.creator_uid}
-              hearts={itemOrder3.hearts || false}       
+              hearts={itemOrder3.hearts || false}
+              washer={itemOrder3.is_washed}       
              /> : null }  
           </div>
         </div>  

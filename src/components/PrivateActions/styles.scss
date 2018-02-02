@@ -1,14 +1,75 @@
-.privateActions {
+.privateActions,.privateActionsWasher {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 5;
-  .iconBox {
-    
+  z-index: 15;
+  .iconBox{
+    visibility: hidden; 
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    img {
+      cursor: pointer;
+    }
+    .deleteIcon {
+      display: inline-block;
+      img {
+        padding-right: 21px;
+        cursor: pointer;
+      }
+    }
+ }
+  &:hover {
+   background: rgba(0, 0 ,0, 0.5);
+   .iconBox{
+    visibility: visible;
+   }
+ }
+} 
+//is_washed: true일 때
+.privateActionsWasher {
+  background: rgba(0, 0 ,0, 0.5); 
+}
+
+.privateActions .washerBox ,.privateActionsWasher .washerBox{
+  display: inline-block;
+  vertical-align: top;  
+  &:before {
+    content: "";
+    display: inline-block;    
+    position: relative;
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    top: 17px;
+    left: 36px;
   }
-  &:hover{
-    background: rgba(0,0,0,0.5);
+  &:hover {
+    &:before{
+      content: "";
+      display: inline-block;
+      position: relative;
+      border-radius: 50%;
+      width: 21px;
+      height: 21px;
+      top: 17px;
+      left: 36px;
+      animation: door 2s infinite;
+      background: rgba(9,17,64, 0.5)
+    }
+  }
+}
+
+
+@keyframes door {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(60deg);
+    transform-origin: 20px;
   }
 }

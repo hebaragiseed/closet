@@ -1,5 +1,5 @@
 //imports
-import { auth, db } from 'firebase/client';
+import { db } from 'firebase/client';
 
 //actions
 const SET_FEED = 'SET_FEED';
@@ -62,13 +62,22 @@ function saveNewClothes(file, category, topLength, pantsLength) {
 }
 //옷 사진 제거하는 아이콘 눌렀을때  db에서 제거하기
 function deleteClothes(imageId, category, creatorUid) {
-  return (dispatch, getState) => {
-    console.log('cccccccccc')
-    db.ref(`users/${creatorUid}/closet/${category}/${imageId}`).remove()
-    .then(
-      alert('저장되었습니다')
-    )
-    .catch(error => alert('다시눌러주세요'));    
+  return (dispatch) => {
+    db.ref(`users/${creatorUid}/closet/${category}/${imageId}`).remove();
+  }
+}
+//세탁기 아이콘 눌렀을 때 
+function washerClothes(imageId, category, creatorUid) {
+  return (dispach) => {
+    db.ref(`users/${creatorUid}/closet/${category}/${imageId}`).update({is_washed: true})
+    alert('세탁합니다')
+  }
+}
+//세탁기 아이콘 눌렀을 때 
+function washerCancle(imageId, category, creatorUid) {
+  return (dispach) => {
+    db.ref(`users/${creatorUid}/closet/${category}/${imageId}`).update({is_washed: false})
+    alert('세탁 끝')
   }
 }
 
@@ -99,7 +108,9 @@ const actionCreators = {
   getFeed,
   likeImage,
   saveNewClothes,
-  deleteClothes
+  deleteClothes,
+  washerClothes,
+  washerCancle
 }
 
 export { actionCreators };
