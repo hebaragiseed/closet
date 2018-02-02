@@ -26,8 +26,7 @@ const PrivateClosetInner = props => {console.log(props)
                 onClick={props.openNewClothes}
                 className={styles.topIcon}
                 title="새로운 옷 저장"
-              />
-              <img src={require('images/washer.svg')} alt="" />
+              />             
             </div>
           </div>
         </header>

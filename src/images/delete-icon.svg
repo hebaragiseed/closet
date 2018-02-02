@@ -1,0 +1,23 @@
+
+<svg width="46px" height="44px" viewBox="0 0 46 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="46" height="44"></rect>
+        <path d="M22.8247695,15.3775978 L36.297759,2.36688307 L42.5496843,8.84094127 L29.4159858,21.5240065 L42.769034,33.9759253 L36.6310488,40.5581086 L22.933043,27.7845116 L9.46005351,40.7952263 L3.20812818,34.3211681 L16.3418267,21.6381029 L2.98877849,9.18618406 L9.12676373,2.60400075 L22.8247695,15.3775978 Z" id="path-2"></path>
+    </defs>
+    <g id="로그인" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="내-옷장-만보기" transform="translate(-1057.000000, -95.000000)">
+            <g id="세탁기True" transform="translate(1057.000000, 95.000000)">
+                <g id="Rectangle-2">
+                    <use fill="#4A90E2" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#9B9B9B" stroke-width="1" x="0.5" y="0.5" width="45" height="43"></rect>
+                </g>
+                <g id="Combined-Shape">
+                    <use fill="#000000" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <path stroke="#9B9B9B" stroke-width="1" d="M9.1514414,3.31067678 L3.69545452,9.16150639 L17.0681688,21.6317642 L3.91512726,34.3335088 L9.47239422,40.0882272 L22.9270278,27.0952386 L36.6063711,39.8514326 L42.062358,34.000603 L28.6896437,21.5303452 L41.8426852,8.82860055 L36.2854183,3.07388215 L22.8307847,16.0668708 L9.1514414,3.31067678 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

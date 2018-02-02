@@ -22,7 +22,7 @@ const PrivateActions = props => {
         </div>
         <div className={styles.deleteIcon}>
           <img 
-            src={require('images/washer.svg')} 
+            src={require('images/delete-icon.svg')} 
             alt="" 
             onClick={props.handleDeleteClothes}
             className={styles.deleteIcon}         

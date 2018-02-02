@@ -16,7 +16,7 @@ const PhotoSlider = props => {
       <div className={styles.photoBox}>
         <div className={`${styles.itemBox} ${styles.itemBox1}`}>
           <div className={styles.heartActionsBox}>
-            <img src={itemOrder0 ? itemOrder0.image : require('images/default.jpeg')} alt="" />
+            <img src={itemOrder0 ? itemOrder0.image : require('images/default-top.svg')} alt="" />
             { itemOrder0 ? <HeartActions 
               likeCount={itemOrder0.like_count}
               isLiked={itemOrder0.is_liked}
@@ -29,7 +29,7 @@ const PhotoSlider = props => {
         </div>
         <div className={`${styles.itemBox} ${styles.itemBox2}`}>
           <div className={styles.heartActionsBox}>        
-            <img src={itemOrder1 ? itemOrder1.image : require('images/default.jpeg') } alt="" />
+            <img src={itemOrder1 ? itemOrder1.image : require('images/default-top.svg') } alt="" />
             { itemOrder1 ? <HeartActions 
               likeCount={itemOrder1.like_count}
               isLiked={itemOrder1.is_liked}
@@ -42,7 +42,7 @@ const PhotoSlider = props => {
         </div>
         <div className={`${styles.itemBox} ${styles.itemBox3}`}>
           <div className={styles.heartActionsBox}>        
-            <img src={itemOrder2 ? itemOrder2.image : require('images/default.jpeg')} alt="" />
+            <img src={itemOrder2 ? itemOrder2.image : require('images/default-top.svg')} alt="" />
             { itemOrder2 ? <HeartActions 
               likeCount={itemOrder2.like_count}
               isLiked={itemOrder2.is_liked}
@@ -55,7 +55,7 @@ const PhotoSlider = props => {
         </div>
         <div className={`${styles.itemBox} ${styles.itemBox4}`}>
           <div className={styles.heartActionsBox}>        
-            <img src={itemOrder3 ? itemOrder3.image : require('images/default.jpeg')} alt="" />
+            <img src={itemOrder3 ? itemOrder3.image : require('images/default-top.svg')} alt="" />
             { itemOrder3 ? <HeartActions 
               likeCount={itemOrder3.like_count}
               isLiked={itemOrder3.is_liked}
