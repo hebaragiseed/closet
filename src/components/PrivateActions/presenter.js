@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './styles.scss';
 
 const PrivateActions = props => {
-  console.log(props.washer, 'washer///11111')
   return (
     <div className={props.washer ? styles.privateActionsWasher : styles.privateActions} >
       <div className={styles.iconBox}>

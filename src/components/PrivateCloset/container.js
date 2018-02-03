@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PrivateCloset from './presenter';
 
-const Container = props => <PrivateCloset {...props} />;
+class Container extends Component{
+  // static prp
+  render (){
+    return (
+      <PrivateCloset 
+        {...this.props}
+        buttonNewCloset={this._buttonNewCloset}
+
+       />
+    );
+  };
+  _buttonNewCloset = () => {
+    const {uid, name, handleNewCloset} = this.props;
+    handleNewCloset(uid,name);
+  }
+};
 
 export default Container;

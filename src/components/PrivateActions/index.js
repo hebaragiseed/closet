@@ -2,11 +2,6 @@ import  { connect } from 'react-redux';
 import Container from './container';
 import { actionCreators as photoActions } from 'redux/modules/photos';
 
-// const mapStateToProps = (state, ownProps) => {
-//   return {
-//     is_washed: 
-//   }
-// }
 const mapDispatchToProps = (dispatch, ownProps) => {
   const {imageId, category, creatorUid, washer} = ownProps;
   return {
@@ -14,7 +9,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch(photoActions.deleteClothes(imageId, category, creatorUid))
     },
     handleWasherClick: () => {
-      console.log('ㅆㅆㅆㅆㅆㅅ')
       if ( washer ) {
         dispatch(photoActions.washerCancle(imageId, category, creatorUid))
       } else {

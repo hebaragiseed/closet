@@ -80,6 +80,41 @@ function washerCancle(imageId, category, creatorUid) {
     alert('세탁 끝')
   }
 }
+//개인 옷장만들기 버튼 눌렀을 때
+function makeNewCloset(uid, name) {
+  console.log('됬니?')
+  db.ref(`users/${uid}`).set({
+    "closet" : {
+      "pants" : [ {
+        "category" : "pants",
+        "creator_uid" : uid,
+        "hearts" : {
+          "6fd0IaI4ZOYXVCpVcMlTvCcRBoJ3" : true
+        },
+        "id" : 0,
+        "image" : "http://image.wconcept.co.kr/productimg/image/img2/06/300415406.jpg?thumbnail=246x328",
+        "is_washed" : false,
+        "like_count" : 0
+      }],
+      "top" : [ {
+        "category" : "pants",
+        "creator_uid" : uid,
+        "hearts" : {
+          "6fd0IaI4ZOYXVCpVcMlTvCcRBoJ3" : true
+        },
+        "id" : 0,
+        "image" : "http://image.wconcept.co.kr/productimg/image/img2/06/300415406.jpg?thumbnail=246x328",
+        "is_washed" : false,
+        "like_count" : 0
+      }]
+    },
+    
+    name,
+    uid
+
+  });
+  
+}
 
 //initial state
 const initialState = {};
@@ -110,7 +145,8 @@ const actionCreators = {
   saveNewClothes,
   deleteClothes,
   washerClothes,
-  washerCancle
+  washerCancle,
+  makeNewCloset
 }
 
 export { actionCreators };

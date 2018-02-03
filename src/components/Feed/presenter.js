@@ -22,7 +22,7 @@ const LoadingFeed = props => (
 
 const RenderFeed = props => (
   <div>
-    {_.map(props.feed, photo => <FeedPhoto {...photo} key={photo.id} />)}
+    {_.map(props.feed, photo => <FeedPhoto {...photo} key={photo.uid} />)}
   </div>
 );
 Feed.propTypes = {
