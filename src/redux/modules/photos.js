@@ -82,7 +82,6 @@ function washerCancle(imageId, category, creatorUid) {
 }
 //개인 옷장만들기 버튼 눌렀을 때
 function makeNewCloset(uid, name) {
-  console.log('됬니?')
   db.ref(`users/${uid}`).set({
     "closet" : {
       "pants" : [ {
