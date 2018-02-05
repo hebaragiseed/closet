@@ -28,7 +28,7 @@ const PrivateMakeCloset = props => {console.log(props,'make')
           <div className={styles.preview}>
             {props.fileTopValue ? 
               <img src={props.fileTopValue} alt="내가 넣은 사진 미리보기"/> 
-              : <span>이미지 미리보기<img src={require('images/top.svg')} alt="미리보기 사진"/></span> 
+              : <span >이미지 미리보기<img src={require('images/top.svg')} alt="미리보기 사진"/></span> 
             }
           </div>
         </div>
@@ -51,7 +51,7 @@ const PrivateMakeCloset = props => {console.log(props,'make')
           </div>
         </div>
         <button type="submit">저장하기</button>
-        <button onClick={props.closeNewClothes}>취소</button>
+        <button onClick={props.closeNewClose}>취소</button>
       </form>      
     </div>
   </div>
