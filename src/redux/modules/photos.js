@@ -46,17 +46,18 @@ function likeImage(imageId, category, creatorUid) {
   };
 }
 //새로운 옷 저장하는 아이콘 눌렀을때 db에 저장
-function saveNewClothes(file, category, topLength, pantsLength) {
+function saveNewClothes(file, category, itemLength) {
   return (dispatch, getState) => {
     const creator_uid = getState().user.uid;
-    const id = topLength.length;
-    console.log(id,'aaaa')
-    db.ref(`users/${creator_uid}/closet/${category}`).push.set({
+    const id = itemLength.length;
+    console.log(id,file, category,'aaaa')
+    db.ref(`users/${creator_uid}/closet/${category}/${id}`).set({
       category,
       creator_uid,
       id,
       image: file,
-      like_count: 0
+      like_count: 0,
+      is_washed: false
     });
   };
 }
@@ -81,38 +82,32 @@ function washerCancle(imageId, category, creatorUid) {
   }
 }
 //개인 옷장만들기 버튼 눌렀을 때
-function makeNewCloset(uid, name) {
-  db.ref(`users/${uid}`).set({
-    "closet" : {
-      "pants" : [ {
-        "category" : "pants",
-        "creator_uid" : uid,
-        "hearts" : {
-          "6fd0IaI4ZOYXVCpVcMlTvCcRBoJ3" : true
-        },
-        "id" : 0,
-        "image" : "http://image.wconcept.co.kr/productimg/image/img2/06/300415406.jpg?thumbnail=246x328",
-        "is_washed" : false,
-        "like_count" : 0
-      }],
-      "top" : [ {
-        "category" : "pants",
-        "creator_uid" : uid,
-        "hearts" : {
-          "6fd0IaI4ZOYXVCpVcMlTvCcRBoJ3" : true
-        },
-        "id" : 0,
-        "image" : "http://image.wconcept.co.kr/productimg/image/img2/06/300415406.jpg?thumbnail=246x328",
-        "is_washed" : false,
-        "like_count" : 0
-      }]
-    },
-    
-    name,
-    uid
-
-  });
-  
+function saveMakeCloset(fileTop, filePants) {
+  return (dispach, getState) => {
+    const {uid, name} = getState().user;
+    db.ref(`users/${uid}`).set({
+      "closet" : {
+        "top" : [ {
+          "category" : "top",
+          "creator_uid" : uid,
+          "id" : 0,
+          "image" : fileTop,
+          "is_washed" : false,
+          "like_count" : 0
+        }],
+        "pants" : [ {
+          "category" : "Pants",
+          "creator_uid" : uid,
+          "id" : 0,
+          "image" : filePants,
+          "is_washed" : false,
+          "like_count" : 0
+        }]
+      },      
+      name,
+      uid
+    });
+  };
 }
 
 //initial state
@@ -145,7 +140,7 @@ const actionCreators = {
   deleteClothes,
   washerClothes,
   washerCancle,
-  makeNewCloset
+  saveMakeCloset
 }
 
 export { actionCreators };

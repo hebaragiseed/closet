@@ -39,7 +39,7 @@ const PrivateClosetInner = props => {console.log(props)
         (<PrivateNewClothes 
           closeNewClothes={props.closeNewClothes}
           topLength={props.closet.top} 
-          pantsLenth={props.closet.pants}
+          pantsLength={props.closet.pants}
         />): null
       }
     </div>

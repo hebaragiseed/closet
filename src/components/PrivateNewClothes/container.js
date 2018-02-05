@@ -27,7 +27,7 @@ class Container extends Component{
     console.log(value, name);
     this.setState({
       [name]: value
-    })
+    });
   }
   _handleSubmit = event => {
     const { file, category } = this.state;

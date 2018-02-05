@@ -1,7 +1,7 @@
 .feedPhoto {
   padding-top: 100px;
   .inner {
-    max-width: 1060px;
+    max-width: $max-inner-width;
     margin: 0 auto;
     height: 650px;
     border: 1px solid $light-gray;

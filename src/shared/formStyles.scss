@@ -7,7 +7,7 @@
   .googleLink {
     display: inline-block;
     width: 100%;
-    @include redButton();
+    @include redButton(no);
     svg {
       position: relative;
       top: 2px;
@@ -48,7 +48,7 @@
       @include boxBorder(yes);
     &[type=submit] {
       margin: 15px 0;
-      @include redButton();
+      @include redButton(no);
     }
     }
   }

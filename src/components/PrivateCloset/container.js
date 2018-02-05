@@ -2,19 +2,30 @@ import React, { Component } from 'react';
 import PrivateCloset from './presenter';
 
 class Container extends Component{
-  // static prp
+  state = {
+    makeClosetSeeing: false
+  };
+  
   render (){
     return (
       <PrivateCloset 
         {...this.props}
-        buttonNewCloset={this._buttonNewCloset}
-
+        makeClosetSeeing={this.state.makeClosetSeeing}
+        makeClosetOpen= {this._makeClosetOpen}
+        makeClosetClose={this._makeClosetClose}
        />
     );
   };
-  _buttonNewCloset = () => {
-    const {uid, name, handleNewCloset} = this.props;
-    handleNewCloset(uid,name);
+  
+  _makeClosetOpen = () => {
+    this.setState({
+      makeClosetSeeing: true
+    });
+  };
+  _makeClosetClose = () => {
+    this.setState({
+      makeClosetSeeing: false
+    })
   }
 };
 

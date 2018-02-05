@@ -49,12 +49,14 @@ $phone-width: 320px;
   } 
 } 
 
-@mixin redButton() {
-  border: 1px solid $light-gray;
+@mixin redButton($shadow) {
   border-radius: 3px;
   height: 26px;
   background: $light-red;
   color: $bg-color;
   font-size: $font-small;
   cursor: pointer;
+  @if $shadow == yes {
+    box-shadow: 1px 2px 4px 0px grey;
+  }
 }

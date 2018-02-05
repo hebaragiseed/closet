@@ -1,0 +1,86 @@
+.privateMakeCloset{
+  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  font-size: $font-medium;
+  .container {
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    @include boxBorder(yes);
+    max-width: 460px;
+    width: 100%;
+    height: 400px;
+    button {
+      @include redButton(yes);
+      background: $blue;
+      width: 100px;
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
+    header {
+      border-bottom: 1px solid $light-gray;
+      height: 50px;
+      span{
+        line-height: 50px;
+        cursor: pointer;
+        padding: 10px;
+        svg {
+          vertical-align: middle;
+        }     
+      } 
+    }
+  }
+}
+//form부분
+.privateMakeCloset form {
+  text-align: center;
+  line-height: 30px;
+  padding: 10px;
+  .column {
+    float: left;
+    span {
+      display: block;
+    }
+    label:nth-of-type(1){
+      margin-right: 20px;
+    }
+    input {
+      @include boxBorder(yes);
+      font-size: $font-small;
+    }
+    .preview {
+      width: 200px;
+      height: 220px;
+      border: 1px solid $light-gray;
+      margin: 10px auto;
+      padding: 30px;
+    }
+  }
+  .columnRight {
+    float: right;
+  }
+  &:after {
+    @include cfixed();
+  }
+}
+//미디어 쿼리
+.privateMakeCloset {
+  @include breakpoint(privateMakeCloset) {
+    .container {
+      height: 600px;
+      .headerText {
+        display: hidden;
+      }
+      .column {
+        float: none;
+      }
+    }
+  }
+}
