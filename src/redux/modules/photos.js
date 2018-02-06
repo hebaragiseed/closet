@@ -49,7 +49,7 @@ function saveNewClothes(file, category, itemLength) {
   return (dispatch, getState) => {
     const creator_uid = getState().user.uid;
     const id = itemLength.length;
-    console.log(id,file, category,'aaaa')
+    //console.log(id,file, category,'saveNewClothes')
     db.ref(`users/${creator_uid}/closet/${category}/${id}`).set({
       category,
       creator_uid,
@@ -95,7 +95,7 @@ function saveMakeCloset(fileTop, filePants) {
           "like_count" : 0
         }],
         "pants" : [ {
-          "category" : "Pants",
+          "category" : "pants",
           "creator_uid" : uid,
           "id" : 0,
           "image" : filePants,
