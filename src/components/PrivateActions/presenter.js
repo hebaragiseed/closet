@@ -9,24 +9,20 @@ const PrivateActions = props => {
       tabIndex="0">
       <div className={styles.iconBox}>
         <div className={styles.washerBox} tabIndex="1">
-          {props.washer ? (<img 
+          <img 
             src={require('images/washer.svg')}
             alt="빨래 중 표시 아이콘" 
             onClick={props.handleWasherClick}
-            />
-            ):(<img 
-              src={require('images/washer.svg')} 
-              alt="빨래 중 표시 아이콘" 
-              onClick={props.handleWasherClick}
-            />)
-          }  
+            title="빨래 중"
+            />  
         </div>
         <div className={styles.deleteIcon} tabIndex="2">
           <img 
             src={require('images/delete-icon.svg')} 
             alt="삭제하기 아이콘" 
             onClick={props.handleDeleteClothes}
-            className={styles.deleteIcon}    
+            className={styles.deleteIcon} 
+            title="삭제하기"   
           />
         </div>
       </div>
