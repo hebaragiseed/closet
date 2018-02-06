@@ -1,3 +1,4 @@
+//부모 component <PrivateCloset>
 import React from 'react';
 import PropTypes from 'prop-types';
 import Ionicon from 'react-ionicons';

@@ -5,7 +5,7 @@ import styles from './styles.scss';
 
 const PrivateNewClothes = props => {
   return(
-  <div className={styles.PrivatenewClothes} tabIndex="0">
+  <div className={styles.privatenewClothes} tabIndex="0">
     <div className={styles.container}>
       <header>
         <span onClick={props.closeNewClothes} >

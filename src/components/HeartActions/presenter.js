@@ -1,3 +1,4 @@
+//부모 component <PhotoSlider>
 import React from 'react';
 import styles from './styles.scss';
 import Ionicon from 'react-ionicons';

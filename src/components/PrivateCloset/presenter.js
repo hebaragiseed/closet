@@ -1,3 +1,4 @@
+//부모 component <App>
 import React from 'react';
 import styles from './styles.scss';
 import PrivateClosetInner from 'components/PrivateClosetInner';

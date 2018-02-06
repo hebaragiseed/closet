@@ -1,3 +1,4 @@
+//부모 component <PrivateCloset>
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.scss';
@@ -48,11 +49,11 @@ const PrivateClosetInner = props => {
 
 PrivateClosetInner.propType = {
   name: PropTypes.string.isRequired,
-  // uid: PropTypes.string.isRequired,
+  uid: PropTypes.string.isRequired,
   id: PropTypes.number.isRequiered,
    closet: PropTypes.shape({
-  //   top: PropTypes.arrayOf().isRequiered,
-  //   pant: PropTypes.arrayOf().isRequiered
+    top: PropTypes.arrayOf().isRequiered,
+    pant: PropTypes.arrayOf().isRequiered
    }).isRequired,
   seeingNewClothes: PropTypes.bool.isRequired,
   openNewClothes: PropTypes.func.isRequired,

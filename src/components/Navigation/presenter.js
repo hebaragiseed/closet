@@ -1,3 +1,4 @@
+//부모 component <App>
 import React from 'react';
 import styles from './styles.scss';
 import { Link } from 'react-router-dom';

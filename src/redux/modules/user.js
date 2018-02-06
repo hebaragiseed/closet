@@ -86,9 +86,7 @@ function logout() {
   return (dispatch => {
     auth.signOut().then(() => {
       dispatch(logoutUser())
-    }).catch(function(error) {
-      
-    });
+    })
   })
 }
 

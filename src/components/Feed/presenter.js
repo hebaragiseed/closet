@@ -1,7 +1,7 @@
+//부모 component <App>
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import styles from './styles.scss';
 import Loading from 'components/Loading';
 import FeedPhoto from 'components/FeedPhoto';
 
