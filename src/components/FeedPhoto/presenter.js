@@ -4,7 +4,7 @@ import styles from './styles.scss';
 import PhotoSlider from 'components/PhotoSlider';
 
 const FeedPhoto = props => {
-  console.log(this.props)
+  //console.log(this.props)
   return (
     <div className={styles.feedPhoto}>
       <div className={styles.inner}>

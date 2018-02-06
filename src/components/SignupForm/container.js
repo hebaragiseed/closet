@@ -27,7 +27,6 @@ class Container extends Component {
   }
   _handleInputChange = event => {
     const { target: { name, value} } = event;
-    console.log(value)
     this.setState({
       [name]: value 
     });

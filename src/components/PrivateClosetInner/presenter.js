@@ -4,7 +4,7 @@ import styles from './styles.scss';
 import PrivatePhotoSlider from 'components/PrivatePhotoSlider';
 import PrivateNewClothes from 'components/PrivateNewClothes';
 
-const PrivateClosetInner = props => {console.log(props)
+const PrivateClosetInner = props => {
   return (
     <div className={styles.privateClosetInner}>
       <div className={styles.inner}>

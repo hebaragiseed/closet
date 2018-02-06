@@ -24,7 +24,6 @@ class Container extends Component{
   }
   _handleImageChange = event => {
     const { target: {value, name } } = event;
-    console.log(value, name);
     this.setState({
       [name]: value
     });

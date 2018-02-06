@@ -3,7 +3,7 @@ import styles from './styles.scss';
 import { Link } from 'react-router-dom';
 
 const Navigation = props => {
-console.log(props,'navigation')
+//console.log(props,'navigation')
   return(
   <div className={styles.navigation}>
     <div className={styles.inner}>

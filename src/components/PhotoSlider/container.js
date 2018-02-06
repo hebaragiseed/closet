@@ -44,7 +44,7 @@ class Container extends Component {
   //처음 아이템의 0번 인덱스에서 부터 화면 크기에 따라 4/2/1 더함
   let nextItemidx = this.state.itemIdx + this.state.resizeItemNumber; 
   let length = this.props.closetItem.length + this.state.resizeItemNumber; 
-  console.log(this.props.closetItem.length,this.state.resizeItemNumber,'kkkkkk')
+  //console.log(this.props.closetItem.length,this.state.resizeItemNumber,'Navigation')
     if (nextItemidx <  length) {
       return (
         this.setState({

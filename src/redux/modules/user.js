@@ -15,7 +15,6 @@ function loginUserSuccess(name, uid, profileImg) {
 }
 
 function logoutUser() {
-  console.log('디스패치')
   return {
     type: LOGOUT_USER
   };
@@ -67,7 +66,7 @@ function createAccount(name, email, password) {
       displayName: name
       })
       .then(function() {
-      console.log("이름저장성공")
+      //console.log("이름저장성공")
       })
       .catch(function(error) {
         var user = auth.currentUser;
@@ -76,7 +75,6 @@ function createAccount(name, email, password) {
       });
     })
     .catch(err => {
-      console.log(err.message);
       alert('가입이 되지 않았습니다. 다시 회원가입해 주세요')
       }
     )

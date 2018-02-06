@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Ionicon from 'react-ionicons';
 import styles from './styles.scss';
 
-const PrivateMakeCloset = props => {console.log(props,'make')
+const PrivateMakeCloset = props => {
   return(
   <div className={styles.privateMakeCloset}>
     <div className={styles.container}>

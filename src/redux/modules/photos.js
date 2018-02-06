@@ -17,7 +17,6 @@ function setFeed(feed) {
 function getFeed() {  
   return (dispatch) => {
     db.ref('/users').on('value', function(value) {
-      console.log(value.val(),'사진들');
       dispatch(setFeed(value.val()))
     })
   }
@@ -144,6 +143,6 @@ const actionCreators = {
 }
 
 export { actionCreators };
-//default reducer esport
 
+//default reducer export
 export default reducer;
