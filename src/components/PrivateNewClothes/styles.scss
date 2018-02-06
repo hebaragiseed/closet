@@ -16,8 +16,7 @@
     width: 100%;
     height: 400px;
     button {
-      @include redButton(yes);
-      background: $blue;
+      @include redButton('blue');
       width: 100px;
       &:last-child {
         margin-left: 20px;

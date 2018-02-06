@@ -17,8 +17,7 @@
     height: 400px;
     @include boxBorder(yes);
     button {
-      @include redButton(yes);
-      background: $blue;
+      @include redButton('blue');
       width: 100px;
       margin: 0 10px;
     }

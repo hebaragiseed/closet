@@ -56,7 +56,17 @@ $phone-width: 320px;
   color: $bg-color;
   font-size: $font-small;
   cursor: pointer;
+  transition: .3s ease-out;
+  &:hover {
+    background: $hover-light-red;
+  }
   @if $shadow == yes {
     box-shadow: 1px 2px 4px 0px grey;
+  }
+  @if $shadow == 'blue' {
+    background: $blue;
+    &:hover {
+      background: $hover-blue;
+    }
   }
 }
