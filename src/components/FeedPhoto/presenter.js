@@ -11,7 +11,7 @@ const FeedPhoto = props => {
         <header>
           <div className={styles.profileImgBox}>
             <img 
-              src={props.profileImg || require('images/default.jpeg')} 
+              src={props.profileImg || require('images/no-photo.jpg')} 
               alt={`${props.name}프로필 이미지`} />
           </div>
           <span>{props.name}</span>
