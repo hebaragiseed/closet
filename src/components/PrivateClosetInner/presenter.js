@@ -19,15 +19,15 @@ const PrivateClosetInner = props => {
             <span>{props.name}</span>            
           </div>
           <div className={styles.rightColumn}>
-            <div className={styles.iconBox}>
+            <button className={styles.iconBox} tabIndex="0">
               <img 
                 src={require('images/top.svg')}
                 alt="새로운 옷 저장하기 아이콘"
                 onClick={props.openNewClothes}
                 className={styles.topIcon}
-                title="새로운 옷 저장"
+                title="새로운 옷 저장"                
               />             
-            </div>
+            </button>
           </div>
         </header>
         <div className={styles.sliderColumn}>

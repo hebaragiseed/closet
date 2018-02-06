@@ -79,7 +79,7 @@
         animation: door-left 2s infinite;
       }    
       &:after {
-          animation: door-right 2s infinite; 
+        animation: door-right 2s infinite; 
       }
     }
   }
@@ -110,7 +110,7 @@
 
 
 
-    //미디어쿼리
+//미디어쿼리
 .navigation {
   @include breakpoint(phone) {
       .leftColumn .logo {

@@ -26,11 +26,14 @@
       .rightColumn{
         float: right;
         .iconBox {
+          display: block;
           line-height: 60px;
-        }
-        img {
-          vertical-align: middle;
+          background: $black;
+          padding: 0;
           cursor: pointer;
+        }
+        .topIcon {
+          vertical-align: middle;
         &:first-child{
         margin-right: 20px;
         }

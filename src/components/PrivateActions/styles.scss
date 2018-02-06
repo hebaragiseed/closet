@@ -22,7 +22,7 @@
       }
     }
  }
-  &:hover {
+  &:hover,&:focus {
    background: rgba(0, 0 ,0, 0.5);
    .iconBox{
     visibility: visible;
@@ -47,7 +47,7 @@
     top: 17px;
     left: 35px;
   }
-  &:hover {
+  &:hover,&:focus {
     &:before{
       content: "";
       display: inline-block;

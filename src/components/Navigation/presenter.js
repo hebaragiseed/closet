@@ -19,7 +19,7 @@ const Navigation = props => {
       </div>
       <div className={styles.rightColumn}>
         <Link to={`/${props.name}`}>
-        <div className={styles.closetIcon}>
+        <div className={styles.closetIcon} title="내 옷장 보기">
           <img src={require("images/mycloset.svg")} alt="" />
         </div>
         </Link>
