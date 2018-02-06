@@ -27,6 +27,7 @@
     .rightColumn {
       float: right;
       .closetIcon {
+        position: relative;
         line-height: 80px;
         display: inline-block;
         margin-right: 20px;
@@ -47,6 +48,67 @@
     }    
   }
 }
+
+//내 옷장 가기 아이콘
+.rightColumn {
+  .closetIcon {
+    &:before{
+      content: '';
+      position: relative;
+      top: 18px;
+      width: 14px;
+      height: 43px;
+      display: inline-block;
+      background: #8B572A;
+      border: 1px solid gray;
+      left: 16px;
+    }
+    &:after {
+      content: '';
+      position: relative;
+      top: 18px;
+      width: 14px;
+      height: 43px;
+      display: inline-block;
+      background: #8B572A;
+      border: 1px solid gray;
+      left: -16px;    
+    }
+    &:hover {
+      &:before {
+        animation: door-left 2s infinite;
+      }    
+      &:after {
+          animation: door-right 2s infinite; 
+      }
+    }
+  }
+}
+@keyframes door-left {
+  from {
+     transform: perspective(500) rotateY(0deg);
+     transform-origin: 0% 50%;
+     
+  }
+  to {
+     transform: perspective(500) rotateY(-110deg);
+      transform-origin: 0% 50%;
+      
+  }
+}
+
+@keyframes door-right {
+  from {
+    transform: perspective(500) rotateY(0deg);
+    transform-origin: 100% 50%;
+ }
+ to {
+    transform: perspective(500) rotateY(110deg);
+     transform-origin: 100% 50%;     
+ }
+}
+
+
 
     //미디어쿼리
 .navigation {

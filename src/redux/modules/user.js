@@ -35,7 +35,7 @@ function googleLogin() {
         dispatch(loginUserSuccess(name, uid, profileImg))            
       })
     })
-    .catch(err => {console.log(err.message)})
+    .catch(err => {alert(err.message)})
   }  
 }
 
@@ -51,7 +51,7 @@ function emailLogin(email, password) {
       dispatch(loginUserSuccess(name, uid))
       }
     )  
-    .catch(err => console.log(err.message))
+    .catch(err => alert(err.message))
   });
 }
 
