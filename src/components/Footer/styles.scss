@@ -19,12 +19,12 @@
 }
 //미디어 쿼리
 .footer {
-  @include breakpoint(max-desktop)  {
+  @include breakpoint('max-desktop')  {
     width: 100%;
     padding: 20px;
     margin-top: 0;
   }
-  @include breakpoint(max-tablet) {
+  @include breakpoint('max-tablet') {
     text-align: center;
     .leftColumn {
       float: none;

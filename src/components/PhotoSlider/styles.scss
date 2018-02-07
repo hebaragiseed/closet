@@ -37,7 +37,7 @@
 //미디어 쿼리
 .photoSlider {
   .photoBox {
-    @include breakpoint(tablet-portrait) {
+    @include breakpoint('tablet-portrait') {
       .itemBox4 {
         display: none;
       }
@@ -45,7 +45,7 @@
         width: 33.3333%;
       }
     }
-    @include breakpoint(phone-tablet) {
+    @include breakpoint('phone-tablet') {
       .itemBox3 {
         display: none;
       }
@@ -53,7 +53,7 @@
         width: 50%;
       }
     }
-    @include breakpoint(phone-only) {     
+    @include breakpoint('phone') {     
       .itemBox2 {
         display: none;
       }

@@ -13,7 +13,7 @@ const Navigation = props => {
           <h1>옷장</h1>
           <Link to="/">
             <div className={styles.logo}>
-              <img src={require("images/logo.svg")} alt="" />
+              <img src={require("images/logo.svg")} alt="로고 이미지" title="home"/>
             </div>
           </Link>
         </div>
@@ -21,7 +21,7 @@ const Navigation = props => {
       <div className={styles.rightColumn}>
         <Link to={`/${props.name}`}>
         <div className={styles.closetIcon} title="내 옷장 보기">
-          <img src={require("images/mycloset.svg")} alt="" />
+          <img src={require("images/mycloset.svg")} alt="내 옷장 보기아이콘" />
         </div>
         </Link>
         <button onClick={props.handleLogout}>로그아웃</button>
