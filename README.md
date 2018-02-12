@@ -1,3 +1,39 @@
+# closet 
+옷장을 헤집어 놓지 않고 옷장에 있는 옷들을 코디하고 싶다.
+<br>
+
+## 기능
+**로그인, 회원가입**
+- google, 회원가입
+
+**다른 사람들 옷장보기**
+- 마음에 드는 옷에 하트❤️ 달기
+
+**개인 옷장에 옷 저장,삭제**
+- 처음에는 개인옷장 만들기로 개인의 옷장을 만든다.
+- 새로운 옷을 저장한다.
+- 옷을 삭제한다.
+제대로 동작안됨; 삭제되면 다시정렬 되야하나, 사진만 제거된다😱
+
+**내가 빨려고 빼논 옷은 표시한다**
+- 세탁기 아이콘 누르면 어둡게 표시된다.
+
+**반응형**
+
+<br>
+
+## 기술 스택
+- webpack
+- React 
+- Rdux
+- Sass(scss)
+- DB: firebase
+- 배포: suge.sh
+
+### [closet 사이트 보기](legal-wool.surge.sh)
+
+<hr>
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
